@@ -1,0 +1,4 @@
+raw/*
+csv/*
+tmp.*
+*.log
