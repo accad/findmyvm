@@ -9,7 +9,7 @@ import datetime
 dbconn = psycopg2.connect("dbname=findmyvmdb user=findmyvmuser")
 cur_s = dbconn.cursor()
 cur_i = dbconn.cursor()
-cur_s.execute('SELECT vc_host,vc_user,vc_pwd,failcount FROM vc WHERE failcount > 2 ORDER BY vc_host ');
+cur_s.execute('SELECT vc_host,vc_user,vc_pwd,failcount FROM vc WHERE failcount BETWEEN 2 AND 19 ORDER BY vc_host');
 rows=cur_s.fetchall()
 
 for row in rows:

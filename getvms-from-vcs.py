@@ -59,11 +59,11 @@ for row in rows:
       cur_i.execute("INSERT INTO vms VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
         (scandate, str(summary.vm), summary.config.name, summary.config.vmPathName, summary.config.guestFullName, summary.runtime.powerState, summary.guest.ipAddress, 
          summary.guest.toolsStatus, str(summary.runtime.host.name), summary.config.memorySizeMB, summary.config.numCpu,
-         vc_host, c_p_n, macs, ipall, summary.config.uuid.encode(), summary.config.instanceUuid.encode() ))
+         row[0], c_p_n, macs, ipall, summary.config.uuid, summary.config.instanceUuid ))
 
-  except:
+  except Exception as e:
     cur_i.execute("UPDATE vc SET ignore = True WHERE vc_host = '" + row[0] + "'")
-    print (row[0])
+    print (row[0], e)
 
   cur_i.execute("UPDATE vc SET scandate = %s WHERE vc_host = %s", (scandate,row[0]))
   dbconn.commit()

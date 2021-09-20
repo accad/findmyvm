@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 10.11
--- Dumped by pg_dump version 10.11
+-- Dumped from database version 10.16
+-- Dumped by pg_dump version 10.16
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -53,7 +53,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: bk_2018; Type: TABLE; Schema: public; Owner: cecadmin
+-- Name: bk_2018; Type: TABLE; Schema: public; Owner: findmyvmuser
 --
 
 CREATE TABLE public.bk_2018 (
@@ -75,10 +75,10 @@ CREATE TABLE public.bk_2018 (
 );
 
 
-ALTER TABLE public.bk_2018 OWNER TO cecadmin;
+ALTER TABLE public.bk_2018 OWNER TO findmyvmuser;
 
 --
--- Name: bk_2019; Type: TABLE; Schema: public; Owner: cecadmin
+-- Name: bk_2019; Type: TABLE; Schema: public; Owner: findmyvmuser
 --
 
 CREATE TABLE public.bk_2019 (
@@ -100,7 +100,34 @@ CREATE TABLE public.bk_2019 (
 );
 
 
-ALTER TABLE public.bk_2019 OWNER TO cecadmin;
+ALTER TABLE public.bk_2019 OWNER TO findmyvmuser;
+
+--
+-- Name: bk_2020; Type: TABLE; Schema: public; Owner: findmyvmuser
+--
+
+CREATE TABLE public.bk_2020 (
+    scandate timestamp without time zone,
+    vm character varying(64),
+    config_name character varying(128),
+    config_vmpathname character varying(256),
+    config_guestfullname character varying(128),
+    runtime_powerstate character varying(64),
+    guest_ipaddress character varying(64),
+    guest_toolsstatus character varying(64),
+    runtime_host_name character varying(64),
+    config_memorysizemb integer,
+    config_numcpu integer,
+    vc character varying(128),
+    parent_name character varying(128),
+    nic_macaddress character varying(2048),
+    nic_ipaddress character varying(2048),
+    uuid character varying(40),
+    instanceuuid character varying(40)
+);
+
+
+ALTER TABLE public.bk_2020 OWNER TO findmyvmuser;
 
 --
 -- Name: esxi; Type: TABLE; Schema: public; Owner: findmyvmuser
@@ -216,7 +243,9 @@ CREATE TABLE public.vms (
     vc character varying(128),
     parent_name character varying(128),
     nic_macaddress character varying(2048),
-    nic_ipaddress character varying(2048)
+    nic_ipaddress character varying(2048),
+    uuid character varying(40),
+    instanceuuid character varying(40)
 );
 
 
@@ -241,7 +270,9 @@ CREATE TABLE public.vms_test (
     vc character varying(128),
     parent_name character varying(128),
     nic_macaddress character varying(2048),
-    nic_ipaddress character varying(2048)
+    nic_ipaddress character varying(2048),
+    instanceuuid character(40),
+    uuid character(40)
 );
 
 

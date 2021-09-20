@@ -80,7 +80,7 @@ for child in children:
        summary.guest.ipAddress,summary.guest.toolsStatus, str(summary.runtime.host.name), summary.config.memorySizeMB, summary.config.numCpu, 
        vc_host, c_p_n, macs, ipall, summary.config.uuid.encode(), summary.config.instanceUuid.encode() ))
   else:
-    cur_i.execute("INSERT INTO vms_test VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)", 
+    cur_i.execute("INSERT INTO vms VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)", 
       (scandate, str(summary.vm), summary.config.name, summary.config.vmPathName, summary.config.guestFullName, summary.runtime.powerState, 
        summary.guest.ipAddress,summary.guest.toolsStatus, str(summary.runtime.host.name), summary.config.memorySizeMB, summary.config.numCpu, 
        vc_host, c_p_n, macs, ipall, summary.config.uuid.encode(), summary.config.instanceUuid.encode() ))
