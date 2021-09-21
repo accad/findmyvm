@@ -18,8 +18,15 @@ echo -n "getvms-from-vcs done: " >> $LOGFILE
 date >> $LOGFILE
 echo >> $LOGFILE
 
+/home/cecadmin/findmyvm2/getcluster-from-vcs.py >> $LOGFILE
+echo -n "getcluster-from-vcs.py done: " >> $LOGFILE
+date >> $LOGFILE
+echo >> $LOGFILE 
+
 /home/cecadmin/findmyvm2/create-index.py > /var/www/roweb/findmyvm/index.html
 /home/cecadmin/findmyvm2/create-vcs-list.py > /var/www/roweb/findmyvm/vc.html
+/home/cecadmin/findmyvm2/create-cluster-list.py > /var/www/roweb/findmyvm/clusters.html
+
 echo -n "create-index done: " >> $LOGFILE
 date >> $LOGFILE
 echo >> $LOGFILE
