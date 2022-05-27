@@ -32,10 +32,6 @@ date >> $LOGFILE
 echo >> $LOGFILE
 echo >> $LOGFILE
 
-/home/cecadmin/findmyvm2/getnetworkjson.py -u siterecadmin -p DgT2WfMXiUyZ7NXg -s 10.228.254.152 --api 2.6.1 -o /var/www/roweb/findmyvm/networks.json
-
-### /home/cecadmin/findmyvm2/networks.json
-
-cat $LOGFILE | /usr/bin/mail -s "$SUBJECT" accadn@cec.lab.emc.com
+cat $LOGFILE | /usr/bin/mail -s "$SUBJECT" nicholas.accad@delllabs.net
 #cat $LOGFILE | /usr/bin/mail -s "findmyvm2 dailyrun" accadn@cec.lab.emc.com
 /usr/bin/rm $LOGFILE

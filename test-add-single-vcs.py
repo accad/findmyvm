@@ -32,8 +32,9 @@ if cur.rowcount != 0 and vc_yadd == 'y' :
 
 try:
   vci=connect.SmartConnectNoSSL(host=vc_host,user=vc_user,pwd=vc_pass)
-except:
-  print ('Failed %s %s %s' % (vc_host, vc_user, vc_pass))
+except Exception as e:
+  print ('Failed %s %s' % (vc_host, vc_user))
+  print (e)
 
 if vci:
   print ('Success %s %s %s' % (vc_host, vc_user, vc_pass))

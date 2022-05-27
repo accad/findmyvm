@@ -1,5 +1,6 @@
 raw/*
 csv/*
+OLD/*
 tmp.*
 *.log
 dailyrun.sh
