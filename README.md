@@ -6,6 +6,6 @@ Uses CGI from web as a GUI frontend
 
 Work in progress
 
-Live system in https://roweb.cec.lab.emc.com/findmyvm
+Live system in https://roweb/findmyvm
 
 Nick Accad (2019, 2020)
